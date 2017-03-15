@@ -30,7 +30,8 @@ switch($action){
         $templateParser->display('locations.tpl');
     break;
     case 'agenda':
-        
+        $templateParser->display('jemoer.tpl');
+        include('model/klaasvaak/functions.php');
     break;
     case 'contact':
         $templateParser->display('contact.tpl');

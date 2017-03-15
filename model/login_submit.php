@@ -90,7 +90,7 @@ else
         else
         {
             /*** set the session user_id variable ***/
-            $_SESSION['id'] = $id;
+            $_SESSION['id'] = $name;
 
             /*** tell the user we are logged in ***/
             $message = 'You are now logged in';

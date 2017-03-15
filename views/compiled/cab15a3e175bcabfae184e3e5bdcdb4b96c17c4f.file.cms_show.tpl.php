@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-01-30 10:54:52
+<?php /* Smarty version Smarty-3.1.18, created on 2017-02-02 20:50:55
          compiled from "views\cms_show.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2526358356a52ae5937-97360820%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cab15a3e175bcabfae184e3e5bdcdb4b96c17c4f' => 
     array (
       0 => 'views\\cms_show.tpl',
-      1 => 1485770089,
+      1 => 1486068653,
       2 => 'file',
     ),
   ),
@@ -27,17 +27,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_58356a52b33886_76535050')) {function content_58356a52b33886_76535050($_smarty_tpl) {?><div id="content">
     <form action="./model/update_user.php" method="post">
     <table>
+      <input type="checkbox" name="delid[]" value="*"> delete all?
     <?php  $_smarty_tpl->tpl_vars['oneItem'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['oneItem']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['result']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['oneItem']->key => $_smarty_tpl->tpl_vars['oneItem']->value) {
 $_smarty_tpl->tpl_vars['oneItem']->_loop = true;
 ?>
-                <tr>
-                    <td><input type="text" class="input" placeholder="name" name="name" value="<?php echo $_smarty_tpl->tpl_vars['oneItem']->value['name'];?>
-" required></td>
+
+                 <tr>
+                    <td><input type="text" class="input" placeholder="id" name="myid[]" value="<?php echo $_smarty_tpl->tpl_vars['oneItem']->value['id'];?>
+" readonly="1" required hidden="hidden"></td>
                 </tr>
                 <tr>
-                <td><select name="status" class="input" name="status">
+                    <td><input type="checkbox" name="delid[]" value="<?php echo $_smarty_tpl->tpl_vars['oneItem']->value['id'];?>
+"> <input type="text" class="input" placeholder="name" name="myname[]" value="<?php echo $_smarty_tpl->tpl_vars['oneItem']->value['name'];?>
+" required></td>
+
+                <td><select class="input" name="mystatus[]">
                       <option value="<?php echo $_smarty_tpl->tpl_vars['oneItem']->value['status'];?>
 ">Momenteel: <?php echo $_smarty_tpl->tpl_vars['oneItem']->value['status'];?>
  </option>

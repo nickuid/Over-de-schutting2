@@ -2,7 +2,7 @@
 if(isset($_SESSION["id"])){
     $user = $_SESSION["id"];
     echo "<div class='container'>";
-    echo "Je bent al ingelogd $user. Klik <a href='?action=logout'>hier</a> om uit te loggen";
+    echo "Je bent al ingelogd $user, klik <a href='?action=logout'>hier</a> om uit te loggen.";
     echo "</div>";
 }
 
